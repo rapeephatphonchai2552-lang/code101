@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-pattern"></div>
+
+    <div class="container">
+        <!-- หน้าที่ 1: หน้าต้อนรับ -->
+        <div class="page active" id="page1">
+            <div class="card">
+                <div class="placeholder-img">🐶</div>
+                <h1>Happy Birthday</h1>
+                <p>(｡♥‿♥｡)</p>
+                <p class="sub-text">คลิกปุ่มถัดไปเลย!! (つ≧▽≦)つ ♥</p>
+                <button class="next-btn" onclick="nextPage(2)">Next!! ^w^</button>
+            </div>
+        </div>
+
+        <!-- หน้าที่ 2: ความทรงจำ -->
+        <div class="page" id="page2">
+            <h2>Our Beautiful Memories</h2>
+            <div class="gallery">
+                <div class="gallery-item">รูปที่ 1</div>
+                <div class="gallery-item">รูปที่ 2</div>
+                <div class="gallery-item">รูปที่ 3</div>
+                <div class="gallery-item">รูปที่ 4</div>
+            </div>
+            <button class="next-btn" onclick="nextPage(3)">Next →</button>
+        </div>
+
+        <!-- หน้าที่ 3: เพลงพิเศษ -->
+        <div class="page" id="page3">
+            <h2>♫ A Song Just For You</h2>
+            <div class="card">
+                <p>นี่คือเพลงที่ทำให้ฉันนึกถึงเธอเสมอ...</p>
+                <div class="song-info">
+                    <strong>"Your Song Name" by Artist</strong>
+                </div>
+                <audio controls>
+                    <source src="assets/song.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="footer-text">ทุกครั้งที่ได้ยินเพลงนี้ ฉันจะนึกถึงช่วงเวลาดีๆ ของเราเสมอ 💛</p>
+            </div>
+            <button class="next-btn" onclick="nextPage(4)">Next →</button>
+        </div>
+
+        <!-- หน้าที่ 4: จดหมาย/คำอวยพร -->
+        <div class="page" id="page4">
+            <h2>อยากเปิดดูไหม? " ⸜(｡˃ ᵕ ˂ )⸝ "</h2>
+            <div class="envelope" onclick="openLetter()">
+                <div id="env-icon" style="font-size: 50px;">✉️</div>
+                <div id="letter-content" class="hidden">
+                    <p>สุขสันต์วันเกิดนะเพื่อนรัก! ขอให้ปีนี้เป็นปีที่ยอดเยี่ยม... (ใส่ข้อความยาวๆ ของคุณตรงนี้) ... รักแกนะ!! HEHE :))</p>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button class="next-btn" onclick="nextPage(5)">Next →</button>
+            </div>
+        </div>
+
+        <!-- หน้าที่ 5: ปิดท้าย -->
+        <div class="page" id="page5">
+            <h2>Happy Birthday Babyy!!</h2>
+            <div class="card">
+                <p style="font-size: 30px;">💖✨🎂</p>
+                <p>ขอบคุณที่เป็นเพื่อนที่ดีต่อกันมาตลอดนะ ขอให้มีความสุขมากๆ ในทุกๆ วันเลย!</p>
+                <p><strong>HAPPY BIRTHDAY ULITT HEHE :))</strong></p>
+            </div>
+            <button class="next-btn" onclick="nextPage(1)">Back to Start ↺</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
